@@ -61,7 +61,7 @@ const parse = async (req, res) => {
       parseFile(file.path, top_n)
       .then ((response) => {
         cleanup(file.path);
-        res.status(200).send({frequency: response});
+        res.status(200).send({frequencies: response});
       });
     }
     catch (err) {

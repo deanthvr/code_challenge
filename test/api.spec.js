@@ -91,9 +91,9 @@ describe('POST /api/parse with no top_n', () => {
               .end( function(err, res) {
                 let response = JSON.parse(res.text);
                 expect(res).to.have.status(200);
-                expect(response).to.haveOwnProperty('frequency');
-                expect(response.frequency).to.be.an('Array');
-                expect(response.frequency.length).to.equal(5);
+                expect(response).to.haveOwnProperty('frequencies');
+                expect(response.frequencies).to.be.an('Array');
+                expect(response.frequencies.length).to.equal(5);
                 done()
               })
             })
